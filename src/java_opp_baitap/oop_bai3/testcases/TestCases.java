@@ -55,7 +55,7 @@ public class TestCases extends BaseTest {
         System.out.println("Email: "+getEmail());
         System.out.println("Password: "+getPassword());
         System.out.println("Click button: "+getClickElement());
-        System.out.println("Verify...");
+        System.out.println("Hiển thị trang Dashboard");
     }
     void testLogin(String url, String email, String password, String clickElement){
         createDriver();
@@ -70,9 +70,9 @@ public class TestCases extends BaseTest {
     void addCategory() {
         createDriver();
         login();
-        System.out.println("Hiển thị trang Home");
-        System.out.println("Click menu chức năng Category");
-        System.out.println("Click button: "+"Add Category");
+        System.out.println("Click menu chức năng Customers");
+        System.out.println("Click button: "+"+ New Customers");
+        System.out.println("Hiển thị màn hình nhập thông tin Customer Details");
         System.out.println("Nhập các trường thông tin");
         System.out.println("Click button Save");
         System.out.println("Verify...");
@@ -83,7 +83,7 @@ public class TestCases extends BaseTest {
     public static void main(String[] args) {
         //TestCases testCases = new TestCases("https://cms.anhtester.com/login","admin@example.com","123456","Login");
         TestCases testCases = new TestCases();
-        testCases.testLogin("HTTPS://CMS.ANHTESTER.COM/LOGIN","admin@example.com","123456","Login");
+        testCases.testLogin("HTTPS://CRM.ANHTESTER.COM/ADMIN/AUTHENTICATION","admin@example.com","123456","Login");
         System.out.println("++++++++++++++++++++++++++++++++++");
         testCases.addCategory();
     }
